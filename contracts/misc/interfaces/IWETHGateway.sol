@@ -6,8 +6,6 @@ interface IWETHGateway {
     
     function withdrawETH(uint256 amount, address onBehalfOf) external;
     
-    function getAWETHAddress() external view returns (address);
-    
     function repayETH(uint256 amount, uint256 rateMode, address onBehalfOf) external payable;		
     
     function borrowETH(uint256 amount, uint256 interesRateMode, uint16 referralCode) external;
