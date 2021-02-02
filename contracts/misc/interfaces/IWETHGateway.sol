@@ -2,9 +2,15 @@
 pragma solidity 0.6.12;
 
 interface IWETHGateway {
-  function depositETH(address onBehalfOf, uint16 referralCode) external payable;
-
-  function withdrawETH(uint256 amount, address onBehalfOf) external;
-
-  function getAWETHAddress() external view returns (address);
+    function depositETH(address onBehalfOf, uint16 referralCode) external payable;
+    
+    function withdrawETH(uint256 amount, address onBehalfOf) external;
+    
+    function getAWETHAddress() external view returns (address);
+    
+    function repayETH(uint256 amount, uint256 rateMode, address onBehalfOf) external payable;		
+    
+    function borrowETH(uint256 amount, uint256 interesRateMode, uint16 referralCode) external;
+    
+    function getAWETHAddress() external view returns (address);
 }
