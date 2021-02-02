@@ -155,7 +155,7 @@ contract WETHGateway is IWETHGateway, Ownable {
   /**
    * @dev Get aWETH address used by WETHGateway
    */
-  function getAWETHAddress() external view returns (address) {
+  function getAWETHAddress() external override view returns (address) {
     return address(aWETH);
   }
 
